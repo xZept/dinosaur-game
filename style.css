@@ -1,0 +1,65 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#game {
+    width: 500px;
+    height: 185px;
+    border: 1px solid black;
+    background-image: url("res/img/background.jpg");
+}
+
+#character {
+    width: 50px;
+    height: 50px;
+    background-image: url("res/img/nicole.png");
+    position: relative;
+    top: 135px;
+}
+
+.animate {
+    animation: jump 500ms;
+}
+
+#block {
+    width: 50px;
+    height: 50px;
+    background-image: url("res/img/allen.png");
+    position: relative;
+    top: 85px;
+    left: 400px;
+    animation: block 1s infinite linear;
+}
+
+@keyframes jump{
+    0%{top: 135px;}
+    30%{top: 85px;}
+    70%{top: 85px;}
+    100%{top: 135px;}
+}   
+
+@keyframes block{
+   0%{left:480px;}
+   100%{left:-40px;} 
+}
+
+#progressBar {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: 390px;
+    bottom: 110px;
+}
+
+#instructions {
+    width: 400px;
+    height: 50px;
+    position: relative;
+    font-family: 'Common Pixel', sans-serif;
+    bottom: 55px;
+    left: 50px;
+    text-align: center;
+}
